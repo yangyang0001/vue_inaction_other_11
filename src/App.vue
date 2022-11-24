@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="root">
+        <h1>App根组件</h1>
+        <Request :request_name="book_req" :request_api="book_api"></Request>
+        <hr />
+        <Left>
+            <Request :request_name="good_req" :request_api="good_api"></Request>
+        </Left>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Left from "@/components/Left.vue";
+import Right from "@/components/Right.vue";
+import Request from "@/components/Request.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    
+    components: {
+        Left,
+        Right,
+        Request
+    },
+
+    data() {
+        return {
+            book_req: '书籍',
+            book_api: 'getBooks',
+            good_req: '商品',
+            good_api: 'initGoods',
+        };
+    },
+
+    mounted() {
+        
+    },
+
+    methods: {
+        
+    },
+};
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="less" scoped>
+.root {
+    padding: 5px 20px 260px 20px;
+    background-color: #9e9b99f4;
 }
 </style>
