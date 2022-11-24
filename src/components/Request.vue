@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="get">获取{{request_name}}</button>
+        <button @click="request_get">获取{{request_name}}</button>
     </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
     },
 
     methods: {
-        async get() {
+        async request_get() {
             var result = await this.axios.get(this.request_api);
             /** 页面需要渲染的东西, 理论上都应该在 data 中定义! */
             console.log(result);

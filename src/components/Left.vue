@@ -1,7 +1,7 @@
 <template>
     <div class="left">
         <h3>Left组件</h3>
-        <slot><slot></slot></slot>
+        <slot></slot>
     </div>
 </template>
 
